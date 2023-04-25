@@ -2,7 +2,13 @@ import { BiMenuAltLeft } from "react-icons/bi";
 import { IoIosArrowDown } from "react-icons/io";
 import { DropDown, NavItems } from "../..";
 
-const Categories = ({ dropDown, categoriesData, setDropDown, onClick }) => {
+const Categories = ({
+  dropDown,
+  categoriesData,
+  activeHeading,
+  setDropDown,
+  onClick,
+}) => {
   return (
     <>
       <div onClick={onClick}>
@@ -30,7 +36,7 @@ const Categories = ({ dropDown, categoriesData, setDropDown, onClick }) => {
         </div>
       </div>
 
-      <NavItems />
+      <NavItems activeHeading={activeHeading} />
     </>
   );
 };

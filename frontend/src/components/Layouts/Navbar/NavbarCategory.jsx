@@ -1,7 +1,13 @@
 import { SearchCategories } from "../..";
 import styles from "../../../styles/styles";
 
-const Navbar = ({ dropDown, categoriesData, setDropDown, onClick }) => {
+const Navbar = ({
+  dropDown,
+  categoriesData,
+  activeHeading,
+  setDropDown,
+  onClick,
+}) => {
   return (
     <div
       className={`${styles.section} relative flex items-center justify-between`}
@@ -11,6 +17,7 @@ const Navbar = ({ dropDown, categoriesData, setDropDown, onClick }) => {
         onClick={onClick}
         categoriesData={categoriesData}
         setDropDown={setDropDown}
+        activeHeading={activeHeading}
       />
     </div>
   );

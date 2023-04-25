@@ -6,7 +6,7 @@ import { categoriesData, productData } from "../../../static/data";
 import { IoIosArrowForward } from "react-icons/io";
 import styles from "../../../styles/styles";
 
-const Header = () => {
+const Header = ({activeHeading}) => {
   const [search, setSearch] = useState("");
   const [searchData, setSearchData] = useState(null);
   const [active, setActive] = useState(false);
@@ -70,6 +70,7 @@ const Header = () => {
           onClick={() => setDropDown(!dropDown)}
           categoriesData={categoriesData}
           setDropDown={setDropDown}
+          activeHeading={activeHeading}
         />
       </div>
     </>
