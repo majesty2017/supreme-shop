@@ -35,7 +35,7 @@ const Login = () => {
       setEmail("")
       setPassword("")
       setAvatar()
-      navigate('/')
+      navigate('/login')
     }).catch((err) => toast.error(err.response.data.message))
   };
 

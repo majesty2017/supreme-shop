@@ -8,6 +8,8 @@ const Categories = ({
   activeHeading,
   setDropDown,
   onClick,
+  isAuthenticated,
+  user
 }) => {
   return (
     <>
@@ -36,7 +38,7 @@ const Categories = ({
         </div>
       </div>
 
-      <NavItems activeHeading={activeHeading} />
+      <NavItems isAuthenticated={isAuthenticated} user={user} activeHeading={activeHeading} />
     </>
   );
 };

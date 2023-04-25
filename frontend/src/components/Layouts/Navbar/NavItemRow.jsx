@@ -1,15 +1,28 @@
 import { Link } from "react-router-dom";
+import { backend_url } from "../../../server";
 
-const NavItemRow = ({Icon, number, isProfile}) => {
+const NavItemRow = ({ Icon, number, isAuthenticated, user, isProfile }) => {
   return (
     <div className="flex items-center">
       <div className="relative cursor-pointer mr-[15px]">
         {!isProfile ? (
           <Icon size={30} color="rgb(255 255 255 / 83%)" />
         ) : (
-          <Link to="/login">
-            <Icon size={30} color="rgb(255 255 255 / 83%)" />
-          </Link>
+          <>
+            {isAuthenticated ? (
+              <Link to="/profile">
+                <img
+                  src={`${backend_url}/${user.avatar}`}
+                  alt={user.name}
+                  className="w-[35px] h-[35px] rounded-full object-cover"
+                />
+              </Link>
+            ) : (
+              <Link to="/login">
+                <Icon size={30} color="rgb(255 255 255 / 83%)" />
+              </Link>
+            )}
+          </>
         )}
         {!isProfile && (
           <span

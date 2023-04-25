@@ -5,8 +5,10 @@ import { NavbarCategory, SearchBox } from "../../";
 import { categoriesData, productData } from "../../../static/data";
 import { IoIosArrowForward } from "react-icons/io";
 import styles from "../../../styles/styles";
+import { useSelector } from "react-redux";
 
 const Header = ({activeHeading}) => {
+  const { isAuthenticated, user } = useSelector((state) => state.user);
   const [search, setSearch] = useState("");
   const [searchData, setSearchData] = useState(null);
   const [active, setActive] = useState(false);
@@ -71,6 +73,8 @@ const Header = ({activeHeading}) => {
           categoriesData={categoriesData}
           setDropDown={setDropDown}
           activeHeading={activeHeading}
+          isAuthenticated={isAuthenticated}
+          user={user}
         />
       </div>
     </>

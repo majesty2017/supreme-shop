@@ -7,6 +7,8 @@ const Navbar = ({
   activeHeading,
   setDropDown,
   onClick,
+  isAuthenticated,
+  user
 }) => {
   return (
     <div
@@ -18,6 +20,8 @@ const Navbar = ({
         categoriesData={categoriesData}
         setDropDown={setDropDown}
         activeHeading={activeHeading}
+        isAuthenticated={isAuthenticated}
+        user={user}
       />
     </div>
   );
