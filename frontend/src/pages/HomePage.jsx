@@ -3,6 +3,7 @@ import {
   Categories, 
   Events, 
   FeaturedProduct, 
+  Footer, 
   Header, 
   Hero,
   Sponsored
@@ -11,13 +12,14 @@ import {
 const HomePage = () => {
   return (
     <div>
-        <Header />
+        <Header activeHeading={1} />
         <Hero />
         <Categories />
         <BestDeals />
         <Events />
         <FeaturedProduct />
         <Sponsored />
+        <Footer />
     </div>
   )
 }
