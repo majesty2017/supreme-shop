@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import {
   ActivationPage,
@@ -25,36 +26,34 @@ function App() {
 
   return (
     <>
-      {loading ? null : (
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" index element={<HomePage />} />
-            <Route path="/login" element={<LoginPage />} />
-            <Route path="/sign-up" element={<SignupPage />} />
-            <Route
-              path="/activation/:activation_token"
-              element={<ActivationPage />}
-            />
-            <Route path="/products" element={<ProductPage />} />
-            <Route path="/best-selling" element={<BestSellingPage />} />
-            <Route path="/events" element={<EventPage />} />
-            <Route path="/faq" element={<FAQPage />} />
-          </Routes>
-
-          <ToastContainer
-            position="bottom-center"
-            autoClose={5000}
-            hideProgressBar={false}
-            newestOnTop={false}
-            closeOnClick
-            rtl={false}
-            pauseOnFocusLoss
-            draggable
-            pauseOnHover
-            theme="dark"
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" index element={<HomePage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/sign-up" element={<SignupPage />} />
+          <Route
+            path="/activation/:activation_token"
+            element={<ActivationPage />}
           />
-        </BrowserRouter>
-      )}
+          <Route path="/products" element={<ProductPage />} />
+          <Route path="/best-selling" element={<BestSellingPage />} />
+          <Route path="/events" element={<EventPage />} />
+          <Route path="/faq" element={<FAQPage />} />
+        </Routes>
+
+        <ToastContainer
+          position="bottom-center"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="dark"
+        />
+      </BrowserRouter>
     </>
   );
 }

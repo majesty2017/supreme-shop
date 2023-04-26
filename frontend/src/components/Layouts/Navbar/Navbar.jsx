@@ -6,9 +6,9 @@ const Navbar = ({ activeHeading }) => {
     <div className="flex items-center">
       {navItems &&
         navItems.map((item, index) => (
-          <div className="flex">
+          <div className="flex"
+              key={item.title}>
             <Link
-              key={item.title}
               to={item.url}
               className={`${
                 activeHeading === index + 1 ? "text-[#17dd1f]" : "text-white"

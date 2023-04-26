@@ -40,7 +40,7 @@ const CountDown = ({data}) => {
   });
 
   return (
-    <div>
+    <div key={1}>
       {timerComponents.length ? (
         timerComponents
       ) : (
