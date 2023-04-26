@@ -8,7 +8,13 @@ const Navbar = ({
   setDropDown,
   onClick,
   isAuthenticated,
-  user
+  user,
+  openCart,
+  setOpenCart,
+  openWishlist,
+  setOpenWishlist,
+  onClick1,
+  closeClick,
 }) => {
   return (
     <div
@@ -22,6 +28,12 @@ const Navbar = ({
         activeHeading={activeHeading}
         isAuthenticated={isAuthenticated}
         user={user}
+        openCart={openCart}
+        setOpenCart={setOpenCart}
+        openWishlist={openWishlist}
+        setOpenWishlist={setOpenWishlist}
+        onClick1={onClick1}
+        closeClick={closeClick}
       />
     </div>
   );

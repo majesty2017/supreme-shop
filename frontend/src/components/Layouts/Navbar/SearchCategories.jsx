@@ -9,7 +9,13 @@ const Categories = ({
   setDropDown,
   onClick,
   isAuthenticated,
-  user
+  user,
+  openCart,
+  setOpenCart,
+  openWishlist,
+  setOpenWishlist,
+  onClick1,
+  closeClick,
 }) => {
   return (
     <>
@@ -38,7 +44,17 @@ const Categories = ({
         </div>
       </div>
 
-      <NavItems isAuthenticated={isAuthenticated} user={user} activeHeading={activeHeading} />
+      <NavItems
+        isAuthenticated={isAuthenticated}
+        user={user}
+        activeHeading={activeHeading}
+        openCart={openCart}
+        setOpenCart={setOpenCart}
+        openWishlist={openWishlist}
+        setOpenWishlist={setOpenWishlist}
+        onClick={onClick1}
+        closeClick={closeClick}
+      />
     </>
   );
 };

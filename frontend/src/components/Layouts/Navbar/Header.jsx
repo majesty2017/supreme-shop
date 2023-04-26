@@ -14,6 +14,9 @@ const Header = ({activeHeading}) => {
   const [active, setActive] = useState(false);
   const [dropDown, setDropDown] = useState(false)
 
+  const [openCart, setOpenCart] = useState(false)
+  const [openWishlist, setOpenWishlist] = useState(false)
+
   const handleSearch = (e) => {
     const term = e.target.value;
     setSearch(term);
@@ -75,6 +78,12 @@ const Header = ({activeHeading}) => {
           activeHeading={activeHeading}
           isAuthenticated={isAuthenticated}
           user={user}
+          openCart={openCart}
+          setOpenCart={setOpenCart}
+          openWishlist={openWishlist}
+          setOpenWishlist={setOpenWishlist}
+          onClick1={() => setOpenCart(true)}
+          closeClick={() => setOpenCart(false)}
         />
       </div>
     </>

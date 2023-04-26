@@ -27,3 +27,5 @@ export { default as CountDown } from "./Events/CountDown";
 
 export { default as ProductCard } from "./Cards/ProductCard";
 export { default as ProductDetailCard } from "./Cards/ProductDetailCard";
+
+export { default as Cart } from './Cart/Cart'
