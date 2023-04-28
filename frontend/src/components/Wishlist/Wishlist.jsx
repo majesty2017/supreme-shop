@@ -1,7 +1,7 @@
 import { RxCross1 } from "react-icons/rx";
-import { IoBagHandleOutline } from "react-icons/io5";
-import {SingleCart} from "..";
+import {SingleWishlist} from "..";
 import { Link } from "react-router-dom";
+import { AiOutlineHeart } from "react-icons/ai";
 
 
 const Wishlist = ({
@@ -40,26 +40,16 @@ const Wishlist = ({
           </div>
           {/* Item length */}
           <div className="flex items-center p-4">
-            <IoBagHandleOutline size={25} />
+            <AiOutlineHeart size={25} />
             <h5 className="pl-2 text-[20px] fon-[500]">3 items</h5>
           </div>
           {/* single cart item */}
           <div className="w-full border-t">
             {cartData &&
               cartData.map((item, index) => (
-                <SingleCart key={index} data={item} />
+                <SingleWishlist key={index} data={item} />
               ))}
           </div>
-        </div>
-        <div className="px-5 mb-3">
-          {/* Checkout */}
-          <Link to="/checkout">
-            <div className="h-[45px] flex items-center justify-center w-full bg-[#e44343] rounded-[5px]">
-              <h1 className="text-[18px] text-white font-[600]">
-                Checkout Now (GHS1090.81)
-              </h1>
-            </div>
-          </Link>
         </div>
       </div>
     </div>

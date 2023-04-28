@@ -13,8 +13,10 @@ const Navbar = ({
   setOpenCart,
   openWishlist,
   setOpenWishlist,
-  onClick1,
-  closeClick,
+  onClickCart,
+  onClickCloseCart,
+  onClickWishlist,
+  onClickCloseWishlist,
 }) => {
   return (
     <div
@@ -32,8 +34,10 @@ const Navbar = ({
         setOpenCart={setOpenCart}
         openWishlist={openWishlist}
         setOpenWishlist={setOpenWishlist}
-        onClick1={onClick1}
-        closeClick={closeClick}
+        onClickCart={onClickCart}
+        onClickCloseCart={onClickCloseCart}
+        onClickWishlist={onClickWishlist}
+        onClickCloseWishlist={onClickCloseWishlist}
       />
     </div>
   );

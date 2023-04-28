@@ -82,8 +82,10 @@ const Header = ({activeHeading}) => {
           setOpenCart={setOpenCart}
           openWishlist={openWishlist}
           setOpenWishlist={setOpenWishlist}
-          onClick1={() => setOpenCart(true)}
-          closeClick={() => setOpenCart(false)}
+          onClickCart={() => setOpenCart(true)}
+          onClickCloseCart={() => setOpenCart(false)}
+          onClickWishlist={() => setOpenWishlist(true)}
+          onClickCloseWishlist={() => setOpenWishlist(false)}
         />
       </div>
     </>

@@ -13,7 +13,7 @@ const LoginScreen = () => {
     } else {
       navigate("/login");
     }
-  }, []);
+  }, [navigate, isAuthenticated]);
 
   return (
     <div>

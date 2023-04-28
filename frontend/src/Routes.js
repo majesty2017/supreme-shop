@@ -1,3 +1,23 @@
-import { LoginPage, SignupPage, ActivationPage, HomePage, ProductPage, BestSellingPage, EventPage, FAQPage } from "./pages";
+import {
+  LoginPage,
+  SignupPage,
+  ActivationPage,
+  HomePage,
+  ProductPage,
+  BestSellingPage,
+  EventPage,
+  FAQPage,
+  OrderSuccessPage,
+} from "./pages";
 
-export { LoginPage, SignupPage, ActivationPage, HomePage, ProductPage, BestSellingPage, EventPage, FAQPage };
+export {
+  LoginPage,
+  SignupPage,
+  ActivationPage,
+  HomePage,
+  ProductPage,
+  BestSellingPage,
+  EventPage,
+  FAQPage,
+  OrderSuccessPage,
+};

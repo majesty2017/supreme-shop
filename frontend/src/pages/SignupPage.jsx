@@ -13,7 +13,7 @@ const SignupScreen = () => {
     } else {
       navigate("/login");
     }
-  }, []);
+  }, [isAuthenticated, navigate]);
   return (
     <div>
       <Signup />

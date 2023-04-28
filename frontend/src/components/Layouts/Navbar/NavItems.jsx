@@ -11,29 +11,36 @@ const NavItems = ({
   setOpenCart,
   openWishlist,
   setOpenWishlist,
-  onClick,
-  closeClick,
+  onClickCart,
+  onClickCloseCart,
+  onClickWishlist,
+  onClickCloseWishlist,
 }) => {
   return (
     <div className="flex items-center">
       <Navbar activeHeading={activeHeading} />
       <div className="flex">
+        {/* Wishlist */}
         <NavItemRow
           openWishlist={openWishlist}
           setOpenWishlist={setOpenWishlist}
           number={0}
           Icon={AiOutlineHeart}
-          onClick={onClick}
-          closeClick={closeClick}
+          onClickWishlist={onClickWishlist}
+          onClickCloseWishlist={onClickCloseWishlist}
         />
+
+        {/* Cart */}
         <NavItemRow
           openCart={openCart}
           setOpenCart={setOpenCart}
           number={1}
           Icon={AiOutlineShoppingCart}
-          onClick={onClick}
-          closeClick={closeClick}
+          onClickCart={onClickCart}
+          onClickCloseCart={onClickCloseCart}
         />
+        
+        {/* User profile */}
         <NavItemRow
           isAuthenticated={isAuthenticated}
           user={user}

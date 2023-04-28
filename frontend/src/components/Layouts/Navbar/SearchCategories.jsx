@@ -14,8 +14,10 @@ const Categories = ({
   setOpenCart,
   openWishlist,
   setOpenWishlist,
-  onClick1,
-  closeClick,
+  onClickCart,
+  onClickCloseCart,
+  onClickWishlist,
+  onClickCloseWishlist,
 }) => {
   return (
     <>
@@ -52,8 +54,10 @@ const Categories = ({
         setOpenCart={setOpenCart}
         openWishlist={openWishlist}
         setOpenWishlist={setOpenWishlist}
-        onClick={onClick1}
-        closeClick={closeClick}
+        onClickCart={onClickCart}
+        onClickCloseCart={onClickCloseCart}
+        onClickWishlist={onClickWishlist}
+        onClickCloseWishlist={onClickCloseWishlist}
       />
     </>
   );

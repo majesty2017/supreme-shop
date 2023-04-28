@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { backend_url } from "../../../server";
-import { Cart } from "../../";
+import { Cart, Wishlist } from "../../";
 
 const NavItemRow = ({
   Icon,
@@ -12,13 +12,18 @@ const NavItemRow = ({
   setOpenCart,
   openWishlist,
   setOpenWishlist,
-  onClick,
-  closeClick,
+  onClickCart,
+  onClickCloseCart,
+  onClickWishlist,
+  onClickCloseWishlist,
 }) => {
   return (
     <>
       <div className="flex items-center">
-        <div className="relative cursor-pointer mr-[15px]" onClick={onClick}>
+        <div
+          className="relative cursor-pointer mr-[15px]"
+          onClick={onClickCart ? onClickCart : onClickWishlist}
+        >
           {!isProfile ? (
             <Icon size={30} color="rgb(255 255 255 / 83%)" />
           ) : (
@@ -49,14 +54,21 @@ const NavItemRow = ({
         </div>
       </div>
 
-      {/* cart pop */}
+      {/* cart popup */}
       {openCart ? (
         <Cart
           openCart={openCart}
           setOpenCart={setOpenCart}
+          onClickCloseCart={onClickCloseCart}
+        />
+      ) : null}
+
+      {/* wishlist popup */}
+      {openWishlist ? (
+        <Wishlist
           openWishlist={openWishlist}
           setOpenWishlist={setOpenWishlist}
-          closeClick={closeClick}
+          onClickCloseWishlist={onClickCloseWishlist}
         />
       ) : null}
     </>

@@ -7,6 +7,7 @@ import {
   FAQPage,
   HomePage,
   LoginPage,
+  OrderSuccessPage,
   ProductPage,
   SignupPage,
 } from "./Routes.js";
@@ -36,6 +37,7 @@ function App() {
             element={<ActivationPage />}
           />
           <Route path="/products" element={<ProductPage />} />
+          <Route path="/product/:id" element={<OrderSuccessPage />} />
           <Route path="/best-selling" element={<BestSellingPage />} />
           <Route path="/events" element={<EventPage />} />
           <Route path="/faq" element={<FAQPage />} />
