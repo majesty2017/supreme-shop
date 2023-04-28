@@ -1,32 +1,32 @@
 import { RxCross1 } from "react-icons/rx";
 import { IoBagHandleOutline } from "react-icons/io5";
-import {SingleCart} from "../";
+import {SingleCart} from "..";
 import { Link } from "react-router-dom";
 
 
-const Cart = ({
-  openCart,
-  setOpenCart,
-  onClick,
-  closeClick
+const Wishlist = ({
+  openWishlist,
+  setOpenWishlist,
+  onClickWishlist,
+  onClickCloseWishlist,
 }) => {
-    const cartData = [
-      {
-        name: "iPhone 14 pro max 256 gb ssd",
-        description: "test",
-        price: 999.50,
-      },
-      {
-        name: "iPhone 14 pro max 256 gb ssd",
-        description: "test",
-        price: 700.99,
-      },
-      {
-        name: "iPhone 14 pro max 256 gb ssd",
-        description: "test",
-        price: 1024.90,
-      },
-    ];
+  const cartData = [
+    {
+      name: "iPhone 14 pro max 256 gb ssd",
+      description: "test",
+      price: 999.5,
+    },
+    {
+      name: "iPhone 14 pro max 256 gb ssd",
+      description: "test",
+      price: 700.99,
+    },
+    {
+      name: "iPhone 14 pro max 256 gb ssd",
+      description: "test",
+      price: 1024.9,
+    },
+  ];
   return (
     <div className="fixed top-0 left-0 w-full bg-[#0000004b] h-screen z-10">
       <div className="fixed top-0 right-0 min-h-full w-[25%] bg-white flex flex-col justify-between shadow-sm">
@@ -35,7 +35,7 @@ const Cart = ({
             <RxCross1
               size={25}
               className="cursor-pointer"
-              onClick={closeClick}
+              onClick={onClickCloseWishlist}
             />
           </div>
           {/* Item length */}
@@ -66,4 +66,4 @@ const Cart = ({
   );
 };
 
-export default Cart
+export default Wishlist

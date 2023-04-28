@@ -28,4 +28,8 @@ export { default as CountDown } from "./Events/CountDown";
 export { default as ProductCard } from "./Cards/ProductCard";
 export { default as ProductDetailCard } from "./Cards/ProductDetailCard";
 
-export { default as Cart } from './Cart/Cart'
+export { default as Cart } from "./Cart/Cart";
+export { default as SingleCart } from "./Cart/SingleCart";
+
+export { default as Wishlist } from "./Wishlist/Wishlist";
+export { default as SingleWishlist } from "./Wishlist/SingleWishlist";

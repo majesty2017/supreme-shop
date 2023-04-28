@@ -1,12 +1,14 @@
 import { RxCross1 } from "react-icons/rx";
 import { IoBagHandleOutline } from "react-icons/io5";
-import {SingleCart} from "../";
+import {SingleCart} from "..";
 import { Link } from "react-router-dom";
 
 
 const Cart = ({
   openCart,
   setOpenCart,
+  openWishlist,
+  setOpenWishlist,
   onClick,
   closeClick
 }) => {
