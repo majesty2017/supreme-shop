@@ -9,4 +9,6 @@ export { default as EventPage } from "./EventPage";
 export { default as FAQPage } from "./FAQPage";
 
 export { default as OrderSuccessPage } from './OrderSuccessPage'
+export { default as ProductDetailPage } from "./ProductDetailPage";
+
 

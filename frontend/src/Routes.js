@@ -8,6 +8,7 @@ import {
   EventPage,
   FAQPage,
   OrderSuccessPage,
+  ProductDetailPage,
 } from "./pages";
 
 export {
@@ -20,4 +21,5 @@ export {
   EventPage,
   FAQPage,
   OrderSuccessPage,
+  ProductDetailPage,
 };

@@ -33,3 +33,7 @@ export { default as SingleCart } from "./Cart/SingleCart";
 
 export { default as Wishlist } from "./Wishlist/Wishlist";
 export { default as SingleWishlist } from "./Wishlist/SingleWishlist";
+
+export { default as ProductDetails } from "./Products/ProductDetails";
+export { default as ProductDetailsInfo } from "./Products/ProductDetailsInfo";
+export { default as SuggestedProducts } from "./Products/SuggestedProducts";

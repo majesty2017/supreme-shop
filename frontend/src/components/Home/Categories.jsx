@@ -30,8 +30,8 @@ const Categories = () => {
         <div className="grid grid-cols-1 gap-[5px] md:grid-cols-2 md:gap-[10px] lg:grid-cols-4 lg:gap-[20px] xl:grid-cols-5 xl:gap-[30px]">
           {categoriesData &&
             categoriesData.map((item, index) => {
-              const handleSubmit = (i) => {
-                navigate(`/products?category=${i.title}`);
+              const handleSubmit = item => {
+                navigate(`/products?category=${item.title}`);
               };
               return (
                 <div
